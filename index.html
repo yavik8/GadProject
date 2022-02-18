@@ -178,8 +178,8 @@
         var client = new HttpClient();
         client.post(url, data, function (response) {
           // do something with response
-          var data = JSON.parse(response);
-          if (data["ans"] == "Yes") {
+          const data = JSON.parse(response);
+          if (data.Ans == 'Yes') {
             document.getElementById("result").innerHTML = "You are diagnosed with GAD";
             document.getElementById("answers").innerHTML = "Book Slot";
           }
